@@ -1,0 +1,15 @@
+diff --git a/src/include/hoard/hoardheap.h b/src/include/hoard/hoardheap.h
+index 874b2dc..5da4554 100644
+--- a/src/include/hoard/hoardheap.h
++++ b/src/include/hoard/hoardheap.h
+@@ -39,7 +39,9 @@ using namespace HL;
+ //#define SUPERBLOCK_SIZE (1024UL*1048576)
+ 
+ // The number of 'emptiness classes'; see the ASPLOS paper for details.
+-#define EMPTINESS_CLASSES 8
++#ifndef EMPTINESS_CLASSES 
++#define EMPTINESS_CLASSES 10
++#endif
+ 
+ 
+ // Hoard-specific layers
